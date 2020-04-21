@@ -26,7 +26,7 @@ def get_filters():
     # Get user input for month (all, january, february, ... , june)
     month=input('Which month do you want investigate? from January to June or all: ').lower()
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # Get user input for day of week (all, monday, tuesday, ... sunday)
     day=input('Which day do you want investigate? all, Monday, Tuesday, ... Sunday: ').lower()
 
     print('-'*40)
@@ -91,7 +91,7 @@ def time_stats(df):
     print("The most common day of the week: ",popular_weekday)
 
 
-    # TO DO: display the most common start hour
+    # display the most common start hour
     popular_hour = df['hour'].mode()[0]
     print("The most common start hour: ",popular_hour)
 
@@ -107,16 +107,16 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
+    # display most commonly used start station
     popular_start_station = df['Start Station'].mode()[0]
     print("The most popular start station: ",popular_start_station)
 
 
-    # TO DO: display most commonly used end station
+    # display most commonly used end station
     popular_end_station = df['End Station'].mode()[0]
     print("The most popular end station: ",popular_end_station)
 
-    # TO DO: display most frequent combination of start station and end station trip
+    # display most frequent combination of start station and end station trip
     df['combination']="from "+df['Start Station']+" to "+df['End Station']
     popular_combination = df['combination'].mode()[0]
     print("The most popular combination: ",popular_combination)
@@ -132,12 +132,12 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
+    # display total travel time
     df['duration']=df['End Time']-df['Start Time']
     print("the total travel time: "+str(df['duration'].sum()))
 
 
-    # TO DO: display mean travel time
+    # display mean travel time
     print("the mean travel time: "+str(df['duration'].mean()))
 
 
