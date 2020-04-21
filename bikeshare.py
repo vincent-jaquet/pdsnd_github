@@ -23,7 +23,7 @@ def get_filters():
           city=input('Sorry we only have data for Chicago, New York City or Washington. Enter one of these city: ').lower()
 
 
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # Get user input for month (all, january, february, ... , june)
     month=input('Which month do you want investigate? from January to June or all: ').lower()
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
@@ -80,13 +80,13 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
+    # Display the most common month
     popular_month = df['month'].mode()[0]
     num_to_month={1:"January",2:"February",3:"March",4:"April",5:"May",6:"June"}
     print("The most common start month: ",num_to_month[popular_month])
 
 
-    # TO DO: display the most common day of week
+    # Display the most common day of week
     popular_weekday = df['day_of_week'].mode()[0]
     print("The most common day of the week: ",popular_weekday)
 
